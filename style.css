@@ -1,0 +1,252 @@
+/* Variabel CSS untuk kemudahan penyesuaian */
+:root {
+    --primary-color: #A0522D; /* Warna Cokelat Muda/Sienna, mungkin merepresentasikan Kain Tenun */
+    --secondary-color: #F4E7D9; /* Warna Krem/Putih Gading */
+    --text-color: #333333;
+    --background-color: #F8F8F8;
+    --error-color: #E74C3C;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+/* --- Pengaturan Global dan Body --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- Halaman Login --- */
+.login-container {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Batasi lebar container */
+    text-align: center;
+}
+
+.login-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.login-container p {
+    margin-bottom: 25px;
+    color: #777;
+    font-size: 0.95em;
+}
+
+/* --- Form dan Input --- */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #CCCCCC;
+    border-radius: var(--border-radius);
+    font-size: 1em;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+/* Efek Hover/Fokus Input */
+.input-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(160, 82, 45, 0.2); /* Bayangan lembut */
+    outline: none;
+}
+
+/* --- Tombol Masuk --- */
+.button-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+/* Efek Hover Tombol */
+.button-primary:hover {
+    background-color: #8B4513; /* Warna sedikit lebih gelap saat di-hover */
+    transform: translateY(-2px); /* Efek sedikit terangkat */
+}
+
+.button-primary:active {
+    transform: translateY(0); /* Kembali normal saat diklik */
+    background-color: #6E350E;
+}
+
+/* --- Pesan Error (Awalnya tersembunyi, ditampilkan dengan JS) --- */
+.error-message {
+    color: var(--error-color);
+    text-align: center;
+    margin-top: -5px;
+    font-size: 0.9em;
+    height: 1.5em; /* Berikan tinggi agar tidak ada pergeseran tata letak */
+    opacity: 0;
+    transition: opacity var(--transition-speed);
+}
+
+/* Kelas yang ditambahkan oleh JS untuk menampilkan pesan error */
+.error-message.show {
+    opacity: 1;
+}
+
+/* --- Tautan Kaki Halaman --- */
+.footer-links {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.footer-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.footer-links a:hover {
+    color: #8B4513; /* Warna lebih gelap saat di-hover */
+    text-decoration: underline;
+}
+
+.footer-links span {
+    margin: 0 10px;
+    color: #AAA;
+}
+
+/* --- Modal Sukses Login --- */
+.login-success-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.login-success-modal.show {
+    opacity: 1;
+}
+
+.login-success-content {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
+}
+
+.login-success-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.login-success-content p {
+    color: #666;
+    margin: 8px 0;
+    font-size: 0.95em;
+}
+
+.success-email {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 10px 0;
+    word-break: break-word;
+}
+
+.success-message {
+    color: #888;
+    font-style: italic;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+/* Responsive untuk modal */
+@media (max-width: 480px) {
+    .login-success-content {
+        padding: 30px 20px;
+    }
+    
+    .success-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 36px;
+    }
+    
+    .login-success-content h3 {
+        font-size: 1.3em;
+    }
+}

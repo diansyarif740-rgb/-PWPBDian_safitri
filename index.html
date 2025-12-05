@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KainTenun - Beranda</title>
+    <link rel="stylesheet" href="stayls.css" />
+</head>
+<body>
+    <header>
+      <div class="brand">
+        <div class="brand-text">
+          <div class="site-name">KainTenun</div>
+        </div>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">☰</button>
+      <nav>
+        <ul id="navMenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#kaintenun">KainTenun</a></li>
+          <li><a href="#wanita">Baju Wanita</a></li>
+          <li><a href="#pria">Baju Pria</a></li>
+          <li><a href="#aksesoris">Aksesoris</a></li>
+          <li><a href="blog.html"> Blog</a></li>
+          <li><a href="login.html" class="nav-login-btn">Login</a></li>
+          <li>
+            <button id="cartButton" class="nav-cart-btn" aria-label="Buka Keranjang">
+              Keranjang <span id="cartCount" class="cart-count">0</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+              <main>
+                <section id="home">
+                  <div class="home-content">
+                    <div class="hero-slider">
+                      <div class="hero-main">
+                        <img id="heroImage" src="74cb4ec4e293d21bb47657f30ff72540.jpg" alt="Kain Tenun Hero" />
+                      </div>
+                      <div class="hero-thumbnails">
+                        <img src="74cb4ec4e293d21bb47657f30ff72540.jpg" alt="Thumb 1" class="thumbnail active" onclick="changeHeroImage(this.src)" />
+                        <img src="Berbagai_jenis_songket.jpg" alt="Thumb 2" class="thumbnail" onclick="changeHeroImage(this.src)" />
+                        <img src="b8390fcb3a3542809efc2a72b91381b5~tplv-aphluv4xwc-resize-webp_800_800.webp" alt="Thumb 3" class="thumbnail" onclick="changeHeroImage(this.src)" />
+                        <img src="KUNIMG-1024x1024.jpg" alt="Thumb 4" class="thumbnail" onclick="changeHeroImage(this.src)" />
+                        <img src="mm.jpg" alt="Thumb 5" class="thumbnail" onclick="changeHeroImage(this.src)" />
+                      </div>
+                    </div>
+                    <div class="home-text">
+                      <h1 class="hero-main-title">Kain Tenun Nusantara</h1>
+                      <h2 class="hero-subtitle">Warisan Budaya Autentik</h2>
+                      <p class="hero-desc">Temukan keindahan kain tradisional dari berbagai daerah Indonesia. Setiap kain menceritakan kisah dan budaya lokal yang kaya.</p>
+                      <p class="hero-tagline">Kualitas terbaik, desain asli, dan harga yang terjangkau.</p>
+                    </div>
+                  </div>                                        
+
+                  <div class="shop-categories">
+                    <button class="cat-btn active" data-cat="all">
+                      <img src="Berbagai_jenis_songket.jpg" alt="Kain Tenun" />
+                      <div>Kain Tenun</div>
+                    </button>
+                    <button class="cat-btn" data-cat="wanita">
+                      <img src="b8390fcb3a3542809efc2a72b91381b5~tplv-aphluv4xwc-resize-webp_800_800.webp" alt="Baju Wanita" />
+                      <div>Baju Wanita</div>
+                    </button>
+                    <button class="cat-btn" data-cat="pria">
+                      <img src="KUNIMG-1024x1024.jpg" alt="Baju Pria" />
+                      <div>Baju Pria</div>
+                    </button>
+                    <button class="cat-btn" data-cat="aksesoris">
+                      <img src="mm.jpg" alt="Aksesoris" />
+                      <div>Aksesoris</div>
+                    </button>
+                  </div>
+
+                  <div class="shop-cta">
+                    <button id="shopBtn" class="shop-btn">Belanja di sini</button>
+                  </div>
+
+                  <section id="shop-preview" class="shop-preview" aria-hidden="true">
+                    <div class="shop-preview-inner">
+                      <div class="shop-preview-header">
+                        <h3>Preview Belanja</h3>
+                        <button id="closeShopPreview" class="close-preview" aria-label="Tutup">✕</button>
+                      </div>
+                      <p class="shop-preview-lead">Gabungkan koleksi terbaik kami di satu tempat.</p>
+                      <div id="shopPreviewGrid" class="kain-grid"></div>
+                    </div>
+                  </section>
+                </section>
+
+                <section id="kaintenun" class="kaintenun-section">
+                  <div class="container">
+                    <div class="section-header">
+                      <h2>Kain Tenun Koleksi</h2>
+                      <button id="backToTopBtn" class="back-to-top-btn">Kembali ke Atas</button>
+                    </div>
+                    <p class="lead">Koleksi kain tenun kami menampilkan keindahan warisan budaya Indonesia dengan motif-motif khas daerah.</p>
+
+                    <div class="kain-grid">
+                      <div class="kain-item">
+                        <img src="sumbah.jpg" alt="Motif Sumba" />
+                        <h3>Motif Sumba</h3>
+                        <p class="desc">Warna hangat, motif geometris yang kuat.</p>
+                        <div class="card-footer"><span class="price">Rp&nbsp;450.000</span></div>
+                      </div>
+
+                      <div class="kain-item">
+                        <img src="Tenun-Ikat-Nagekeo.jpg" alt="Motif Flores" />
+                        <h3>Motif Flores</h3>
+                        <p class="desc">Halus dan bernuansa cerah, cocok untuk acara formal.</p>
+                        <div class="card-footer"><span class="price">Rp&nbsp;500.000</span></div>
+                      </div>
+
+                      <div class="kain-item">
+                        <img src="Berbagai_jenis_songket.jpg" alt="Songket" />
+                        <h3>Songket</h3>
+                        <p class="desc">Halus dan cerah dengan detail benang emas yang mewah.</p>
+                        <div class="card-footer"><span class="price">Rp&nbsp;520.000</span></div>
+                      </div>
+
+                      <div class="kain-item">
+                        <img src="pelembang.jpeg" alt="Songket Palembang" />
+                        <h3>Songket Palembang</h3>
+                        <p class="desc">Kain mewah dengan detail benang emas khas Palembang.</p>
+                        <div class="card-footer"><span class="price">Rp&nbsp;340.000</span></div>
+                      </div>
+
+                      <div class="kain-item">
+                        <img src="images.jpg" alt="Tenun Silungkang" />
+                        <h3>Tenun Silungkang</h3>
+                        <p class="desc">Lembut dan halus dengan motif tradisional.</p>
+                        <div class="card-footer"><span class="price">Rp&nbsp;215.000</span></div>
+                      </div>
+
+                      <div class="kain-item">
+                        <img src="ei_1694407286889-removebg-preview1.png" alt="Tenun Toraja" />
+                        <h3>Tenun Toraja</h3>
+                        <p class="desc">Lembut dan halus dengan motif tradisional.</p>
+                        <div class="card-footer"><span class="price">Rp&nbsp;215.000</span></div>
+                      </div>
+
+                      <div class="kain-item">
+                        <img src="kebat.jpg" alt="Kain Kebat" />
+                        <h3>Kain Kebat</h3>
+                        <p class="desc">Lembut dan halus warna yg unik seperti batik.</p>
+                        <div class="card-footer"><span class="price">Rp&nbsp;215.000</span></div>
+                      </div>
+
+                      <div class="kain-item">
+                        <img src="Kain-Tenun-Mbojo-004.jpg" alt="Tenun Mbojo" />
+                        <h3>Tenun Mbojo</h3>
+                        <p class="desc">Lembut dan halus dengan motif tradisional.</p>
+                        <div class="card-footer"><span class="price">Rp&nbsp;215.000</span></div>
+                      </div>
+                  </div>
+                </section>
+                <section id="wanita" class="baju-wanita">
+                  <div class="container">
+                    <div class="section-header">
+            <h2>Baju Wanita</h2>
+            <button class="back-to-top-btn">Kembali ke Atas</button>
+          </div>
+          <p class="lead">Koleksi baju wanita kami menampilkan keindahan tenun dalam potongan modern yang elegan.</p>
+
+          <div class="kain-grid">
+            <div class="kain-item">
+              <img src="88.jpg" alt="Set Tenun" />
+              <h3>Pakaian gamis</h3>
+              <p class="88.jpg">Pakaian wanita</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;250.000</span></div>
+            </div>
+
+            <div class="kain-item">
+              <img src="66.jpg" alt="Set Tenun" />
+              <h3>Pakaian kameja</h3>
+              <p class="desc">Paket lengkap baju + rok.</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;350.000</span></div>
+            </div>
+
+            <div class="kain-item">
+              <img src="77.jpg" alt="Set Tenun" />
+              <h3>Set Lengkap</h3>
+              <p class="desc">Paket lengkap baju + selendang tenun.</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;150.000</span></div>
+            </div>
+
+            <div class="kain-item">
+              <img src="99.jpg" alt="Tunik" />
+              <h3>Tunik</h3>
+              <p class="desc">Tunik yang indah.</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;350.000</span></div>
+            </div>
+
+            <div class="kain-item">
+              <img src="r.jpg" alt="Dress Tenun" />
+              <h3>Rok tenun</h3>
+              <p class="desc">Dress panjang dengan motif tenun elegan.</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;400.000</span></div>
+            </div>
+
+            <div class="kain-item">
+              <img src="bt.jpg" alt="Blouse Tenun" />
+              <h3>Blouse Tenun</h3>
+              <p class="desc">Blouse modern dengan aksen tenun tradisional.</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;280.000</span></div>
+            </div>
+            <div class="kain-item">
+                <img src="e545f69cec5388e8ff4c4ad0bb82e042.jpg" alt="Gamis Tenun Srikandi" />
+                <h3>Gamis Tenun Srikandi</h3>
+                <p class="desc">Gamis panjang elegan dengan sentuhan tenun pada bagian pinggang dan manset.</p>
+                <div class="card-footer">
+                    <span class="price">Rp&nbsp;550.000</span>
+                    <button class="add-to-cart-btn">Tambah ke Keranjang</button>
+                </div>
+            </div>
+
+            <div class="kain-item">
+                <img src="b.jpg" alt="Blouse Tenun Padma" />
+                <h3>Blouse Tenun Padma</h3>
+                <p class="desc">Blouse semi-formal dengan aksen tenun Toraja, nyaman untuk aktivitas harian.</p>
+                <div class="card-footer">
+                    <span class="price">Rp&nbsp;320.000</span>
+                    <button class="add-to-cart-btn">Tambah ke Keranjang</button>
+                </div>
+            </div>
+            
+            <div class="kain-item">
+                <img src="o.jpg" alt="Outer Tenun Lintang" />
+                <h3>Outer Tenun Lintang</h3>
+                <p class="desc">Outerwear panjang (cardigan) tanpa kancing, menonjolkan motif tenun Endek.</p>
+                <div class="card-footer">
+                    <span class="price">Rp&nbsp;480.000</span>
+                    <button class="add-to-cart-btn">Tambah ke Keranjang</button>
+                </div>
+            </div>
+            
+            <div class="kain-item">
+                <img src="r.jpg" alt="Rok Lilit Tenun Savana" />
+                <h3>Rok Lilit Tenun Savana</h3>
+                <p class="desc">Rok lilit praktis dengan motif tenun Sumba yang cerah.</p>
+                <div class="card-footer">
+                    <span class="price">Rp&nbsp;390.000</span>
+                    <button class="add-to-cart-btn">Tambah ke Keranjang</button>
+                </div>
+            </div>
+            
+            <div class="kain-item">
+                <img src="ss.jpg" alt="Setelan Tenun Kasmaran" />
+                <h3>Setelan Tenun Kasmaran</h3>
+                <p class="desc">Setelan atasan dan bawahan yang serasi, cocok untuk acara resmi.</p>
+                <div class="card-footer">
+                    <span class="price">Rp&nbsp;790.000</span>
+                    <button class="add-to-cart-btn">Tambah ke Keranjang</button>
+                </div>
+          </div>
+        </div>
+      </section>
+      <section id="pria" class="baju-pria">
+        <div class="container">
+          <div class="section-header">
+            <h2>Baju Pria</h2>
+            <button class="back-to-top-btn">Kembali ke Atas</button>
+          </div>
+          <p class="lead">Koleksi pakaian pria yang menggabungkan keanggunan tenun tradisional dengan potongan modern.</p>
+
+          <div class="kain-grid">
+            <div class="kain-item">
+              <img src="KUNIMG-1024x1024.jpg" alt="Kemeja Tenun" />
+              <h3>Kemeja Tenun</h3>
+              <p class="desc">Kemeja lengan panjang dengan motif tenun eksklusif.</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;450.000</span></div>
+            </div>
+            <div class="kain-item">
+              <img src="kemeja.jpg" alt="Jas Tenun" />
+              <h3>Jas Modern</h3>
+              <p class="desc">Jas dengan detail tenun, sempurna untuk acara formal.</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;1.250.000</span></div>
+            </div>
+            <div class="kain-item">
+              <img src="beskap.jpg" alt="Beskap Tenun" />
+              <h3>Beskap Adat</h3>
+              <p class="desc">Beskap dengan kombinasi tenun tradisional.</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;850.000</span></div>
+            </div>
+            <div class="kain-item">
+              <img src="HITAM-1-1024x1024.jpg" alt="Kemeja tenun" />
+              <h3>Kemeja Casual</h3>
+              <p class="desc">Kemeja santai dengan aksen tenun minimalis.</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;375.000</span></div>
+            </div>
+            <div class="kain-item">
+              <img src="eeee.jpg" alt="Set Formal" />
+              <h3>Set Formal</h3>
+              <p class="desc">Setelan lengkap dengan detail tenun mewah.</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;750.000</span></div>
+            </div>
+            <div class="kain-item">
+              <img src="im.jpg" alt="Beskap Tenun" />
+              <h3>Pakian kameja</h3>
+              <p class="desc">Kameja yang di tennun denang warna yg indah.</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;850.000</span></div>
+            </div>
+            <div class="kain-item">
+              <img src="ab.jpg" alt="Kemeja tenun" />
+              <h3>Kemeja Casual</h3>
+              <p class="desc">Pakian Kaus.</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;375.000</span></div>
+            </div>
+            <div class="kain-item">
+              <img src="666.jpg" alt="Set Formal" />
+              <h3>jas </h3>
+              <p class="desc">jas</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;1.750.000</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="aksesoris" class="aksesoris-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Aksesoris Koleksi</h2>
+            <button class="back-to-top-btn">Kembali ke Atas</button>
+          </div>
+          <p class="lead">Koleksi aksesoris yang mempercantik penampilan dengan sentuhan tenun tradisional.</p>
+
+          <div class="kain-grid">
+            <div class="kain-item">
+              <img src="mm.jpg" alt="Tas Tenun" />
+              <h3>Tas Tenun</h3>
+              <p class="desc">Tas tangan dengan motif tenun eksklusif.</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;75.000</span></div>
+            </div>
+            <div class="kain-item">
+              <img src="mmm.jpg" alt="Selendang Tenun" />
+              <h3>Selendang</h3>
+              <p class="desc">Selendang tenun dengan motif tradisional.</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;180.000</span></div>
+            </div>
+            <div class="kain-item">
+              <img src="dm.jpg" alt="Dompet Tenun" />
+              <h3>Dompet Tenun</h3>
+              <p class="desc">Dompet dengan detail tenun yang elegan.</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;15.000</span></div>
+            </div>
+            <div class="kain-item">
+              <img src="Ikat-Pinggang.jpeg" alt="Ikat Pinggang" />
+              <h3>Ikat Pinggang</h3>
+              <p class="desc">Ikat pinggang dengan aksen tenun modern.</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;25.000</span></div>
+            </div>
+            <div class="kain-item">
+              <img src="muh.jpg" alt="Set Aksesoris" />
+              <h3>Set Lengkap</h3>
+              <p class="desc">Set aksesoris tenun (tas, dompet, selendang).</p>
+              <div class="card-footer"><span class="price">Rp&nbsp;50.000</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="penutup" class="penutup-section">
+        <div class="container">
+          <h2>Terima Kasih</h2>
+          <p class="lead">Terima kasih telah mengunjungi KainTenun.</p>
+        </div>
+      </section>
+            </table>
+          </div>
+        </div>
+      </section>
+</section>
+    <footer>
+      <p>&copy; 2025 KainTenun. Semua hak dilindungi.</p>
+    </footer>
+
+    <!-- Modal Transaksi Pembayaran -->
+    <div id="payment-modal" class="payment-modal-backdrop">
+      <div class="payment-modal-content">
+        <div class="payment-modal-header">
+          <h3>Transaksi Pembayaran</h3>
+          <button type="button" class="payment-close-btn" aria-label="Tutup">✕</button>
+        </div>
+        <div class="payment-modal-body">
+          <div class="payment-success-icon">✓</div>
+          <h4 class="payment-title">Pesanan Berhasil!</h4>
+          <div class="payment-details">
+            <div class="payment-detail-row">
+              <span class="payment-label">Produk:</span>
+              <span class="payment-value" id="payment-product">-</span>
+            </div>
+            <div class="payment-detail-row">
+              <span class="payment-label">Harga:</span>
+              <span class="payment-value" id="payment-price">-</span>
+            </div>
+            <div class="payment-detail-row">
+              <span class="payment-label">Nama:</span>
+              <span class="payment-value" id="payment-name">-</span>
+            </div>
+            <div class="payment-detail-row">
+              <span class="payment-label">Email:</span>
+              <span class="payment-value" id="payment-email">-</span>
+            </div>
+            <div class="payment-detail-row">
+              <span class="payment-label">Telepon:</span>
+              <span class="payment-value" id="payment-phone">-</span>
+            </div>
+            <div class="payment-detail-row">
+              <span class="payment-label">Alamat:</span>
+              <span class="payment-value" id="payment-address">-</span>
+            </div>
+            <div class="payment-total-row">
+              <span class="payment-total-label">Total Pembayaran:</span>
+              <span class="payment-total-value" id="payment-total">-</span>
+            </div>
+          </div>
+          <div class="payment-info">
+            <p>Terima kasih atas pesanan Anda! Kami akan menghubungi Anda segera untuk konfirmasi pembayaran.</p>
+          </div>
+        </div>
+        <div class="payment-modal-actions">
+          <button type="button" class="payment-btn payment-btn-primary" id="payment-close-btn">Lanjut Belanja</button>
+        </div>
+      </div>
+    </div>
+
+  <script src="scripts.js"></script>
+  </body>
+</html>
